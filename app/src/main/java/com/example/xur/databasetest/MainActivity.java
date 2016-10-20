@@ -44,5 +44,18 @@ private MyDataBaseHelper dataBaseHelper;
                 Toast.makeText(MainActivity.this,"插入成功",Toast.LENGTH_SHORT).show();
             }
         });
+        Button updateData=(Button)findViewById(R.id.update_data);
+        updateData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabase db=dataBaseHelper.getWritableDatabase();
+                ContentValues values=new ContentValues();
+                values.put("price",10.99);
+                db.update("Book",values,"name=?",new String[]{
+                        "The Da Vinci Code"
+                });
+                Toast.makeText(MainActivity.this,"更新成功",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
