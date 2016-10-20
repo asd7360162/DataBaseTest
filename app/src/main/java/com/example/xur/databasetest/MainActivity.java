@@ -11,7 +11,7 @@ private MyDataBaseHelper dataBaseHelper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dataBaseHelper=new MyDataBaseHelper(this,"BookStore.db",null,1);
+        dataBaseHelper=new MyDataBaseHelper(this,"BookStore.db",null,2);
         Button createDatabase=(Button)findViewById(R.id.create_database);
         createDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
