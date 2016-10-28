@@ -36,7 +36,7 @@ private MyDataBaseHelper dataBaseHelper;
                 values.put("price",16.96);
                 db.insert("Book",null,values);//插入第一条数据
                 values.clear();
-                //开始组装第一条数据
+                //开始组装第二条数据
                 values.put("name","The Lost Symble");
                 values.put("author","Dan Brown");
                 values.put("pages",510);
