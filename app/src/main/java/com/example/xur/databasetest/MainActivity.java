@@ -58,5 +58,13 @@ private MyDataBaseHelper dataBaseHelper;
                 Toast.makeText(MainActivity.this,"更新成功",Toast.LENGTH_SHORT).show();
             }
         });
+        Button deleteData=(Button)findViewById(R.id.delete_data);
+        deleteData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabase db=dataBaseHelper.getWritableDatabase();
+                db.delete("Book","page>?",new String[] { "500" });
+            }
+        });
     }
 }
