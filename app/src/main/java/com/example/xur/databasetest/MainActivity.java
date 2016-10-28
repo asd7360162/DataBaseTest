@@ -39,7 +39,7 @@ private MyDataBaseHelper dataBaseHelper;
                 //开始组装第一条数据
                 values.put("name","The Lost Symble");
                 values.put("author","Dan Brown");
-                values.put("pages",500);
+                values.put("pages",510);
                 values.put("price",10.96);
                 db.insert("Book",null,values);//插入第二条数据
                 Toast.makeText(MainActivity.this,"插入成功",Toast.LENGTH_SHORT).show();
