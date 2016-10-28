@@ -64,6 +64,7 @@ private MyDataBaseHelper dataBaseHelper;
             public void onClick(View v) {
                 SQLiteDatabase db=dataBaseHelper.getWritableDatabase();
                 db.delete("Book","pages>?",new String[] { "500" });
+                Toast.makeText(MainActivity.this,"删除成功",Toast.LENGTH_SHORT).show();
             }
         });
     }
