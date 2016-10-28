@@ -92,5 +92,13 @@ private MyDataBaseHelper dataBaseHelper;
                 cursor.close();
             }
         });
+        Button replaceData=(Button)findViewById(R.id.replace_data);
+        replaceData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabase db=dataBaseHelper.getWritableDatabase();
+                db.beginTransaction();//开启事务
+            }
+        });
     }
 }
