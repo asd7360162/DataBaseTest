@@ -63,7 +63,7 @@ private MyDataBaseHelper dataBaseHelper;
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db=dataBaseHelper.getWritableDatabase();
-                db.delete("Book","page>?",new String[] { "500" });
+                db.delete("Book","pages>?",new String[] { "500" });
             }
         });
     }
