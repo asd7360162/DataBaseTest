@@ -100,10 +100,6 @@ private MyDataBaseHelper dataBaseHelper;
                 db.beginTransaction();//开启事务
                 try{
                     db.delete("Book",null,null);
-                    if(true){
-                        //手动抛出一个异常，让事务失败
-                        throw new NullPointerException();
-                    }
                     ContentValues values=new ContentValues();
                     values.put("name","Game of THrones");
                     values.put("author","George Martin");
